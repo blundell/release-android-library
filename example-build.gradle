@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+
+ext {
+    PUBLISH_GROUP_ID = 'com.blundell'
+    PUBLISH_ARTIFACT_ID = 'soundboard-engine'
+    PUBLISH_VERSION = '0.0.2'
+}
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.blundell.example.android.library"
+        minSdkVersion 14
+        targetSdkVersion 20
+    }
+}
+
+dependencies {
+    // Whatever your dependencies are
+}
+
+apply from: 'android-release-aar.gradle'
