@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 ext {
     PUBLISH_GROUP_ID = 'com.blundell'
-    PUBLISH_ARTIFACT_ID = 'soundboard-engine'
+    PUBLISH_ARTIFACT_ID = 'my-example-android-library'
     PUBLISH_VERSION = '0.0.2'
 }
 
@@ -21,4 +21,4 @@ dependencies {
     // Whatever your dependencies are
 }
 
-apply from: 'android-release-aar.gradle'
+apply from: 'http://raw.github.com/blundell/release-android-library/master/android-release-aar.gradle'
