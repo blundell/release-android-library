@@ -1,7 +1,7 @@
 release-android-library
 =======================
 
-Remote script to create a maven compatible release of an android library (aar)
+Remote script to create a maven compatible release of an android library (aar). This release comes in a zip or exploded form and is only created locally inside your own build folder. You can these use these files to release to JCenter or Maven Central.
 
 ####adding to your library
 ```
