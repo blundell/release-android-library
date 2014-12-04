@@ -26,7 +26,7 @@ dependencies {
 // Copy the file locally and use
 apply from: 'android-release-aar.gradle'
 // or use the remote copy to keep update with latest changes
-apply from: 'http://raw.github.com/blundell/release-android-library/master/android-release-aar.gradle'
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
 ```
 
 
