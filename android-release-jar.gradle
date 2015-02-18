@@ -14,7 +14,7 @@ def localReleaseDest = "${buildDir}/release/${version}"
 
 android.libraryVariants.all { variant ->
     def name = variant.buildType.name
-    if (!name.equals(com.android.builder.core.BuilderConstants.DEBUG)) {
+    if (!name.equals("debug")) {
         def task = project.tasks.create "jar${name.capitalize()}", Jar
         task.dependsOn variant.javaCompile
         task.from variant.javaCompile.destinationDir
