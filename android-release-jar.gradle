@@ -5,11 +5,6 @@ def groupId = project.PUBLISH_GROUP_ID
 def artifactId = project.PUBLISH_ARTIFACT_ID
 def version = project.PUBLISH_VERSION
 
-configurations {
-    optional
-    compile.extendsFrom optional
-}
-
 def localReleaseDest = "${buildDir}/release/${version}"
 
 android.libraryVariants.all { variant ->
@@ -42,21 +37,6 @@ uploadArchives {
         pom.groupId = groupId
         pom.artifactId = artifactId
         pom.version = version
-        
-        pom.withXml {
-            asNode().dependencies.dependency.findAll { xmlDep ->
-                // mark optional dependencies
-                if (project.configurations.optional.allDependencies.findAll { dep ->
-                    xmlDep.groupId.text() == dep.group && xmlDep.artifactId.text() == dep.name
-                }) {
-                    def xmlOptional = xmlDep.optional[0];
-                    if (!xmlOptional) {
-                        xmlOptional = xmlDep.appendNode('optional')
-                    }
-                    xmlOptional.value = 'true';
-                }
-            }
-        }
         
         // Add other pom properties here if you want (developer details / licenses)
         repository(url: "file://${localReleaseDest}")
