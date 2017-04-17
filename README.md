@@ -5,7 +5,7 @@ Remote script to create a maven compatible release of an android library (aar). 
 
 Matching blog post here: [blog.blundell-apps.com/locally-release-an-android-library-for-jcenter-or-maven-central-inclusion/](http://blog.blundell-apps.com/locally-release-an-android-library-for-jcenter-or-maven-central-inclusion/)
 
-####adding to your library
+#### adding to your library
 ```
 apply plugin: 'com.android.library'
 
@@ -30,11 +30,11 @@ apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/
 ```
 
 
-####useage
+#### useage
 
 `./gradlew clean build generateRelease`
 
-####example output
+#### example output
 
 
 ```
