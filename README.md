@@ -1,6 +1,12 @@
 release-android-library
 =======================
 
+## 🚨 Deprecated 🚨
+
+This script is deprecated in favour of: [novoda/bintray-release](https://github.com/novoda/bintray-release)
+
+-----
+
 Remote script to create a maven compatible release of an android library (aar). This release comes in a zip or exploded form and is only created locally inside your own build folder. You can these use these files to release to JCenter or Maven Central.
 
 Matching blog post here: [http://blog.blundellapps.co.uk/locally-release-an-android-library-for-jcenter-or-maven-central-inclusion/](http://blog.blundellapps.co.uk/locally-release-an-android-library-for-jcenter-or-maven-central-inclusion/)
